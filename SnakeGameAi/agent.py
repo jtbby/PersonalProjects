@@ -111,17 +111,17 @@ def train():
       
         state_old = agent.get_state(game)
 
-      
+        
         final_move = agent.get_action(state_old)
 
-     
+       
         reward, done, score = game.play_step(final_move)
         state_new = agent.get_state(game)
 
-        
+      
         agent.train_short_memory(state_old, final_move, reward, state_new, done)
 
-    
+        
         agent.remember(state_old, final_move, reward, state_new, done)
 
         if done:
