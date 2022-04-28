@@ -150,5 +150,5 @@ class SnakeGameAI:
             y += BLOCK_SIZE
         elif self.direction == Direction.UP:
             y -= BLOCK_SIZE
-
+ 
         self.head = Point(x, y)
